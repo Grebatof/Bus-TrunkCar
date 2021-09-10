@@ -70,11 +70,13 @@ class CarUnitTests {
 
         bus1.beep()
 
-        String
         Assert.assertEquals(4, 2 + 2)
 
-        cars = cars.sortCarsByTypes()
-        cars = cars.sortCarsByPower(300)
+        cars = cars.sortCarsByPowerInBigWay(250)
+        cars.displayCars()
+        cars = cars.filterCarsByTypes<Bus>()
+        cars.displayCars()
+        cars = cars.filterCarsByPowerMoreThan(300)
 
         cars.displayCars()
     }
